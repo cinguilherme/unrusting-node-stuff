@@ -1,21 +1,16 @@
 import express from 'express';
+import UserRoutes from './users/ports/UserRoutes';
 
 const app = express();
 
 app.get('/', (req, res) => {
-    return res.json({hello: "world"});
-});
-
-
-app.get('/home', (req, res) => {
-    return res.json({home: "page"});
-});
-
-
-app.get('/extra', (req,res) => {
-    return res.json({just:"sayit"});
+    return res.json({});
 })
 
+app.use('/users', UserRoutes);
+
 app.listen(3333, () => {
-    console.log('app listening 3333');
+    console.log('server running on 3333');
+    
 });
+
