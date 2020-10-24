@@ -1,22 +1,22 @@
 {
   "compilerOptions": {
-         
-    "target": "es2020",                          
-    "module": "commonjs",                     
-   
-    "outDir": "./dist",                        
-    "rootDir": "./src",                       
-    
-    "strict": true,                           
-   
-    "esModuleInterop": true,                  
-   
-    
-    "experimentalDecorators": true,        
-    "emitDecoratorMetadata": true,         
-
-    
-    "skipLibCheck": true,                     
-    "forceConsistentCasingInFileNames": true  
+    "target": "es2017",
+    "module": "commonjs",   
+    "allowJs": true,
+    "lib": ["ES6"],           
+    "removeComments": true,    
+    "resolveJsonModule": true,
+    "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   }
 }
