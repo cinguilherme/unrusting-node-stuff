@@ -1,3 +1,6 @@
+compose:
+	sudo docker-compose up
+
 build-image:
 	sudo docker build -t sample .
 
