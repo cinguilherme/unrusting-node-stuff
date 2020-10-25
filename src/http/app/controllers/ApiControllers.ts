@@ -1,9 +1,9 @@
 import {JsonController} from 'routing-controllers';
 
 @JsonController()
-export default ApiControllers {
+export default class ApiControllers {
 
-    private useCases: Map<String, any> = new Map<String, any>();
+    private useCases: Map<string, any> = new Map<string, any>();
 
     constructor() {
 
