@@ -1,4 +1,4 @@
-import {Controller, JsonController} from 'routing-controllers';
+import { JsonController} from 'routing-controllers';
 import { UseCase as FindUsers } from '../../../application/usecases/find-user/UseCase';
 import { UsersRepository } from '../../../modules/user/domain/UsersRepository';
 import { InMemoryUserRepository } from '../../../modules/user/infrastructure/InMemoryUserRepository';

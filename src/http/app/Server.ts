@@ -11,4 +11,8 @@ const options: RoutingControllersOptions = {
 
 useExpressServer(app, options);
 
+app.get('/', (req, res) => {
+    return res.json({status: 'UP'});
+});
+
 app.listen(3000);

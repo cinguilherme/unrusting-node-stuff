@@ -4,7 +4,7 @@ import { Responder } from '../../../../application/usecases/find-user/Responder'
 import User from '../../../../modules/user/domain/User';
 import ApiControllers from '../ApiControllers';
 
-@JsonController()
+@JsonController('/users')
 class UserController extends ApiControllers implements Responder {
     
     private users: Array<User> = [];
@@ -17,7 +17,7 @@ class UserController extends ApiControllers implements Responder {
     }
     
    
-    @Get('/users')
+    @Get()
     async getAll() {
 
         await this.getUserCase(ApiControllers.ALL_USERS_USE_CASE)
