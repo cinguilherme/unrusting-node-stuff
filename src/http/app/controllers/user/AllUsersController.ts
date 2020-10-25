@@ -1,10 +1,10 @@
-import { Get, Controller, JsonController } from 'routing-controllers';
+import { Get, JsonController } from 'routing-controllers';
 import { Command } from '../../../../application/usecases/find-user/Command';
 import { Responder } from '../../../../application/usecases/find-user/Responder';
 import User from '../../../../modules/user/domain/User';
 import ApiControllers from '../ApiControllers';
 
-@JsonController('/users')
+@JsonController()
 class UserController extends ApiControllers implements Responder {
     
     private users: Array<User> = [];
@@ -17,7 +17,7 @@ class UserController extends ApiControllers implements Responder {
     }
     
    
-    @Get('/notes')
+    @Get('/users')
     async getAll() {
 
         await this.getUserCase(ApiControllers.ALL_USERS_USE_CASE)

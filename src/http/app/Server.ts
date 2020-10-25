@@ -1,12 +1,14 @@
 import "reflect-metadata";
 import express from 'express';
-import { useExpressServer } from "routing-controllers";
+import { useExpressServer, RoutingControllersOptions } from "routing-controllers";
 
 const app = express();
 
-useExpressServer(app, {
-    routePrefix: "/api",
-    controllers: ['UserController']
-});
+const options: RoutingControllersOptions = {
+    routePrefix: '/api',
+    controllers: [__dirname + "/controllers/**/*.js"],
+};
+
+useExpressServer(app, options);
 
 app.listen(3000);
