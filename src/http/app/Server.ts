@@ -1,18 +1,13 @@
-import "reflect-metadata";
+
 import express from 'express';
-import { useExpressServer, RoutingControllersOptions } from "routing-controllers";
+import userRouter from './controllers/user/Routes';
 
 const app = express();
-
-const options: RoutingControllersOptions = {
-    routePrefix: '/api',
-    controllers: [__dirname + "/controllers/**/*.js"],
-};
-
-useExpressServer(app, options);
 
 app.get('/', (req, res) => {
     return res.json({status: 'UP'});
 });
+
+app.use(userRouter);
 
 app.listen(3000);
