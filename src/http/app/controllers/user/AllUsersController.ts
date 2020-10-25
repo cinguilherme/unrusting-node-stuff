@@ -1,10 +1,10 @@
-import { JsonController, Get } from 'routing-controllers';
+import { Get, Controller, JsonController } from 'routing-controllers';
 import { Command } from '../../../../application/usecases/find-user/Command';
 import { Responder } from '../../../../application/usecases/find-user/Responder';
 import User from '../../../../modules/user/domain/User';
 import ApiControllers from '../ApiControllers';
 
-@JsonController()
+@JsonController('/users')
 class UserController extends ApiControllers implements Responder {
     
     private users: Array<User> = [];
