@@ -1,9 +1,14 @@
 FROM node:14-alpine
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY /dist /app
+COPY package*.json ./
+RUN yarn install
 
-CMD "node ./app/server.js"
+COPY . .
+
+RUN yarn tsc
 
 EXPOSE 3000
+
+CMD ["node", "dist/src/http/app/Server.js"]

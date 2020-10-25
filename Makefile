@@ -1,11 +1,11 @@
 compose:
-	sudo docker-compose up
+	docker-compose up
 
 elastic-local:
-	cd elastic-cluster-local && sudo docker-compose up
+	cd elastic-cluster-local && docker-compose up
 
 build-image:
-	sudo docker build -t sample .
+	docker build -t sample .
 
 run-image:
-	sudo docker run sample:latest
+	docker run  -p 3000:3000 sample:latest
