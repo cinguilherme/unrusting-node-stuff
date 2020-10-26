@@ -7,5 +7,5 @@ elastic-local:
 build-image:
 	docker build -t sample .
 
-run-image:
-	docker run  -p 3000:3000 sample:latest
+build-image-prod:
+	docker build -t sample-prod -f Dockerfile-prod .

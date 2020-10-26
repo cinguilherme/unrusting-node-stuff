@@ -1,0 +1,11 @@
+version: "3.7"
+
+services: 
+
+    test_sample:
+        image: sample:latest
+        command: "yarn test"
+
+    mongo_test:
+        image: mongo:4.2
+        
