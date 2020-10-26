@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev ./src/http/app/Server.ts --respawn --traspileOnly --no-notify --ignore-watch node_modules",
-    "test": "jest"
+    "test": "jest",
+    "test2": "jest -t ./test/**/*.spec.ts"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

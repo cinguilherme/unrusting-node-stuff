@@ -11,4 +11,4 @@ RUN yarn tsc
 
 EXPOSE 3000
 
-CMD ["node", "dist/src/http/app/Server.js"]
+# CMD ["node", "dist/src/http/app/Server.js"]
